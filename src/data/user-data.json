@@ -1,0 +1,72 @@
+[
+    {
+      "id": 1,
+      "nombre": "mario",
+      "email": "mpelavski48@gmail.com",
+      "telefono": "123654",
+      "password": "appjs"
+    },
+    {
+      "id": 2,
+      "nombre": "mario",
+      "email": "mpelavski48@gmail.com",
+      "telefono": "123654",
+      "password": "appjs"
+    },
+    {
+      "id": 3,
+      "nombre": "nestor",
+      "email": "mp@hhhh.com",
+      "telefono": "123654",
+      "password": "appjs"
+    },
+    {
+      "id": 4,
+      "nombre": "juan",
+      "email": "mp@aaaaa.com",
+      "telefono": "123654",
+      "password": "appjs"
+    },
+    {
+      "id": 5,
+      "nombre": "jorge",
+      "email": "$2a$10$rtW2O0y4OIXSb7vf62HzkOT1kKZ4UwTUJ4ubovaBfoD.9lIpf9QL.",
+      "telefono": "123654",
+      "password": "aaaaaaaaaaaaaaaaaaa"
+    },
+    {
+      "id": 6,
+      "nombre": "nestor",
+      "email": "$2a$10$JFCRJG72s4uaLl0KHmQ0MuYmJSmRkzNqVYr0FK83ynOwOVmgTVzG.",
+      "telefono": "123654",
+      "password": "$2a$10$JFCRJG72s4uaLl0KHmQ0MuYmJSmRkzNqVYr0FK83ynOwOVmgTVzG."
+    },
+    {
+      "id": 7,
+      "nombre": "pedro",
+      "email": "mp@hhhh.com",
+      "telefono": "123654",
+      "password": "$2a$10$WB.10ul0PMOpsq6/I0h5o.F0pxbWRkhP6AoIgD8IViOXokNHT1Q.u"
+    },
+    {
+      "id": 8,
+      "nombre": "nestor",
+      "email": "mp@aaaaa.com",
+      "telefono": "123654",
+      "password": "$2a$10$krzPGcdLvovqNjW8/qAPQeV4ttzaKc.4vllNpa3Uu89QJU5F0PIQ6"
+    },
+    {
+      "id": 9,
+      "nombre": "juan",
+      "email": "mp@aaaaa.com",
+      "telefono": "123654",
+      "password": "$2a$10$xl6GH41TaRKk5NMUucD/leHOr8w8fc2ZmRFm8iVtrOCIbt2zROu3u"
+    },
+    {
+      "id": 10,
+      "nombre": "pedro",
+      "email": "mp@aaaaa.com",
+      "telefono": "123654",
+      "password": "$2a$10$5RghWxTEg4VLGcrkbt/Ld.0kYaKui72SjiIt8girjGSj9nUFQirfW"
+    }
+  ]

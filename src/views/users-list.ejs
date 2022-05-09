@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang=”en”>
+
+<head>
+    <%- include("./partials/head") %>
+</head>
+
+
+<body class="body">
+
+    <header>
+        <div class="header-div">
+            <p class="back-arrow"><a class="arrow" href="/"><i class="fas fa-arrow-alt-circle-left"></i> </a></p>
+
+        </div>
+
+        <h1>
+            NutriFarco<img class="img" src="./img/baking-1293986_1920.png" class="logo" />
+        </h1>
+
+    </header>
+
+
+    <main>
+
+        <div>
+            <div>
+                <nav class="main-nav" id="main-nav">
+                    <ul class="menu">
+                      <li class="menu__item"><a href="" class="menu__link">NOMBRE</a></li>
+                      <li class="menu__item"><a href="" class="menu__link">EMAIL</a></li>
+                      <li class="menu__item"><a href="" class="menu__link">TELEFONO</a></li>
+                      
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                  <h2 class="products-title">Todos los productos</h2>
+                </div>
+        
+                <% userData.forEach(user => { %>
+                <div class="col-12 col-sm-6 col-lg-3">
+                  <section class="product-box">
+                    <a href="/userData/<%= user.id %>">
+                      <article class="product-box_data">
+                        <h2><%= userData.id %></h2>
+                      </article>
+                      <article class="product-box_data">
+                        <h2><%= userData.nombre %></h2>
+                      </article>
+                      <article class="product-box_data">
+                        <h2><%= userData.email %></h2>
+                      </article>
+                      <article class="product-box_data">
+                        <h2><%= userData.telefono %></h2>
+                      </article>
+                    </a>
+                  </section>
+                </div>
+                <% }) %>
+                </div>         
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <%- include("./partials/footer-log-reg") %>
+    </footer>
+</body>
+
+</html>

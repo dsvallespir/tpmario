@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang=”en”>
+
+<head>
+    <%- include("./partials/head") %>
+</head>
+
+
+<body class="body">
+
+    <header>
+        <div class="header-div">
+            <p class="back-arrow"><a class="arrow" href="/"><i class="fas fa-arrow-alt-circle-left"></i> </a></p>
+
+        </div>
+
+        <h1>
+            NutriFarco<img class="img" src="./img/baking-1293986_1920.png" class="logo" />
+        </h1>
+
+    </header>
+
+
+    <main>
+
+        <div>
+            <div class="div-input">
+                <label class="hidden " for="nickname">Teléfono, e-mail o usuario <br></label>
+                <input class="input-log" type="text" name="nickname" id="nickname" placeholder="Nombre de usuari@" />
+
+            </div>
+
+            <div class="div-input">
+                <label class="hidden" for="password">Contraseña <br></label>
+                <input class="input-log" type="password" name="password" id="password" placeholder="Contraseña" />
+
+
+            </div>
+            <div class="div-bottom">
+
+                <a href="/"><button class="bottom-log-continuar" type="submit">Continuar <br></button></a>
+
+                <a href="/register"><button class="bottom-log-crear" type="submit"> Crear cuenta<br></button></a>
+
+                <p class="need-container"><a class="need" href="/help">
+                        Necesito ayuda para ingresar </a>
+                </p>
+
+
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <%- include("./partials/footer-log-reg") %>
+
+    </footer>
+</body>
+
+</html>
