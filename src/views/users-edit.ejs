@@ -26,11 +26,12 @@
         <div>
             
 
-            <form action="/user" method="POST">
+            <form action="/edit" method="POST">
                 <div class="div-input">
-                    <h3>Ingresa tu nombre y apellido</h3>
+                    <h3>Ingresa tu nuevo nombre y apellido</h3>
                     <label class="hidden " for="nickname"><br></label>
-                    <input class="input-log" type="text" name="nombre" id="nickname" placeholder="Nombre y Apellido" />
+                    <input class="input-log" type="text" name="nombre" id="nickname" value=<%= user.nombre %>  />
+                    
                     <% if (locals.errors && errors.nombre) { %>
                         <div class="errors">
                             <%= errors.nombre.msg %> 

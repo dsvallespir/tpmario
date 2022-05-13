@@ -7,7 +7,7 @@ const bcrypt = require('bcryptjs');
 const usersFilePath = path.join(__dirname, "../data/user-data.json");
 const userData = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 
-module.exports={
+const controllers={
     register:(req, res) => {
         console.log(req.body);
 		return res.render('register');
@@ -37,7 +37,6 @@ module.exports={
             telefono:req.body.telefono,
             password:passEncriptada,
         };
-
           userData.push(user);
 
           const jsonTxt = JSON.stringify(userData, null, 2);
@@ -46,7 +45,7 @@ module.exports={
           res.redirect("/");  
 	},
 
-    index:(req,res)=>{
+    index: (req,res)=>{
         
           const userDataFile=fs.readFileSync(usersFilePath,  "utf-8");
           const userData=JSON.parse(userDataFile);
@@ -54,5 +53,51 @@ module.exports={
             userData
         })
     },
-       
+     
+    edit: (req,res)=>{
+        const userDataFile=fs.readFileSync(usersFilePath,  "utf-8");
+        const userData=JSON.parse(userDataFile);
+        
+        const id = req.params.id;
+
+        const user = userData.find((p) => id == p.id);
+    
+        res.render("users-edit", {
+          user,
+        })
+    },    
+    remove: (req,res)=>{
+        const userDataFile=fs.readFileSync(usersFilePath,  "utf-8");
+        const userData=JSON.parse(userDataFile);
+        
+        const userDataUpload=userData.filter(elemento=>elemento.id!==req.body.id);
+
+        const jsonTxt = JSON.stringify(userDataUpload, null, 2);
+        fs.writeFileSync(usersFilePath, jsonTxt, "utf-8");
+
+        res.redirect("/"); 
+    },
+
+    update:(req,res)=>{
+        const userDataFile=fs.readFileSync(usersFilePath,  "utf-8");
+        const userData=JSON.parse(userDataFile);
+
+        const userOld=userData.find(elemento=>elemento.id=req.body.id);
+
+        Object.assign(userOld, {
+            //...req.body,           
+            id: req.body.id,
+            nombre:req.body.nombre,
+            email:req.body.email,
+            telefono:req.body.telefono,
+            password:passEncriptada,
+        });
+
+        const jsonTxt = JSON.stringify(userData, null, 2);
+        fs.writeFileSync(usersFilePath, jsonTxt, "utf-8");
+
+        res.redirect("/"); 
+    }
 }
+
+module.exports = controllers;
